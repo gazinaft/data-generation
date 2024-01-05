@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctdt4c1bryypx"]
+
+[ext_resource type="Texture2D" uid="uid://ddw8g8mxvmobk" path="res://assets/c8fdf56f53821eefd4a9c050f48d703d-2894511841.jpg" id="1_pp7t8"]
+[ext_resource type="PackedScene" uid="uid://wie36wooq8w6" path="res://platform.tscn" id="2_a1u7m"]
+[ext_resource type="PackedScene" uid="uid://d37mq1x0n1pst" path="res://Main_char.tscn" id="3_i2o8h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_08kbu"]
+size = Vector2(58, 49)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577.25, 323.5)
+scale = Vector2(1.56939, 1.5628)
+texture = ExtResource("1_pp7t8")
+
+[node name="Platform" parent="." instance=ExtResource("2_a1u7m")]
+position = Vector2(141, 593)
+
+[node name="Platform2" parent="." instance=ExtResource("2_a1u7m")]
+position = Vector2(323, 593)
+
+[node name="Platform5" parent="." instance=ExtResource("2_a1u7m")]
+position = Vector2(529, 533)
+
+[node name="Platform6" parent="." instance=ExtResource("2_a1u7m")]
+position = Vector2(719, 500)
+
+[node name="Platform7" parent="." instance=ExtResource("2_a1u7m")]
+position = Vector2(690, 361)
+
+[node name="Platform8" parent="." instance=ExtResource("2_a1u7m")]
+position = Vector2(900, 433)
+
+[node name="Main_char" parent="." instance=ExtResource("3_i2o8h")]
+position = Vector2(90, 538)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(619, 301)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_08kbu")
